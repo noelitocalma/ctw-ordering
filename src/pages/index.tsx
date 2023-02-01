@@ -8,15 +8,6 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const { state, dispatch } = useAppState();
-
-  useEffect(() => {
-    console.log({ state })
-  }, [state]);
-
-  useEffect(() => {
-    console.log(state.view)
-  }, [state.view])
-
   const onBack = () => {
     dispatch({ type: Actions.Update, payload: { view: 'restaurant' } });
   }
